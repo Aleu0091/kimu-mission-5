@@ -130,13 +130,22 @@ const handleCustomCommands = async (interaction: Interaction) => {
                         .setTitle(novel.title)
                         .setDescription(novel.description)
                         .addFields(
-                            { name: "Author: ", value: `${authorInfo}` },
+                            {
+                                name: "Author: ",
+                                value: `${novel.author.username} (${novel.author.id})`,
+                            },
                             {
                                 name: "Episode IDs: ",
-                                value: `${episodeIdsInfo}`,
+                                value: `${novel.episodeIds.join(", ")}`,
                             },
-                            { name: "Created At: ", value: `${createdAtInfo}` },
-                            { name: "Updated At: ", value: `${updatedAtInfo}` }
+                            {
+                                name: "Created At: ",
+                                value: `${novel.createdAt}`,
+                            },
+                            {
+                                name: "Updated At: ",
+                                value: `${novel.updatedAt}`,
+                            }
                         );
                     return embed;
                 });
