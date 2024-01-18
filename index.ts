@@ -53,7 +53,7 @@ async function searchNovelByTitle(title: string): Promise<novels[] | null> {
 }
 
 const token =
-    "MTE5NzAwMjAwMDEzNTYxODY2MA.G26G7B.2edKcelGTPRm2pwKLS1LsdmF_BEpiP2LUoMB6A";
+    "token";
 const clientId = "1197002000135618660";
 const guildId = "1197357350508580924";
 const dbPath = "./database/database.sqlite";
